@@ -46,6 +46,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance           title       tags mask       isfloating     monitor */
 	{ "mpv",         NULL,           NULL,       0,                   1,           -1,  },
+	{ "dmenu",       NULL,           NULL,       0,                   1,           -1,  },
 	{ NULL,          "sxiv",         NULL,       0,                   1,           -1,  },
 	{ NULL,          NULL,           "sxiv",     0,                   1,           -1,  },
 	{ NULL,          "connman-gtk",  NULL, 	     0,                   1,           -1,  },
@@ -62,7 +63,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
