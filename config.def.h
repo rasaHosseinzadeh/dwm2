@@ -49,12 +49,10 @@ static const Rule rules[] = {
 	{ "dmenu",       NULL,           NULL,       0,                   1,           -1,  },
 	{ NULL,          "sxiv",         NULL,       0,                   1,           -1,  },
 	{ NULL,          NULL,           "sxiv",     0,                   1,           -1,  },
-	{ NULL,          "connman-gtk",  NULL, 	     0,                   1,           -1,  },
 	{ NULL,          "dict",         NULL,       0,                   1,           -1,  },
 	{ NULL,          "spnotes",      NULL, 	     0,                   1,           -1,  },
 	{ NULL,          "spmusic",      NULL, 	     0,                   1,           -1,  },
 	{ NULL,          "pavucontrol",  NULL, 	     0,                   1,           -1,  },
-	{ NULL,          "keepassxc",    NULL, 	     0,                   1,           -1,  },
 };
 
 #define TERMINAL "st"
