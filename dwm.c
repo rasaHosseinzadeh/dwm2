@@ -1986,25 +1986,21 @@ updategeom(void)
 				m->mh = m->wh = unique[i].height;
 				updatebarpos(m);
 			}
-		    else { /* less monitors available nn < n */
-			for (i = nn; i < n; i++) {
-				for (m = mons; m && m->next; m = m->next);
-				while ((c = m->clients)) {
-					dirty = 1;
-					m->clients = c->next;
-					detachstack(c);
-					c->mon = mons;
-					attachbottom(c);
-					attachstack(c);
-				}
-				if (m == selmon)
-					selmon = mons;
-				cleanupmon(m);
+        /* less monitors available nn < n */
+        for (i = nn; i < n; i++) {
+            for (m = mons; m && m->next; m = m->next);
+            while ((c = m->clients)) {
+                dirty = 1;
+                m->clients = c->next;
+                detachstack(c);
+                c->mon = mons;
+                attachbottom(c);
+                attachstack(c);
+            }
+            if (m == selmon)
+                selmon = mons;
+            cleanupmon(m);
 			}
-			if (m == selmon)
-				selmon = mons;
-			cleanupmon(m);
-		}
 		free(unique);
 	} else
 #endif /* XINERAMA */
